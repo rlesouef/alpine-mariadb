@@ -19,10 +19,12 @@ RUN	mkdir -p /var/run/mysqld \
 	&& mkdir -p /etc/mysql/conf.d \
 	&& mkdir /docker-entrypoint-initdb.d
 
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
 VOLUME /var/lib/mysql
 
 EXPOSE 3306
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["mysqld"]
