@@ -13,13 +13,7 @@
 
 #### Custom usage:
 
-    docker run \
-        -d \
-        --name mariadb \
-        -p 3306:3306 \
-        -v /path/data:/var/lib/mysql \
-        -e MYSQL_ROOT_PASSWORD=myrootpwd \
-        rlesouef/alpine-mariadb
+    docker run -d --name mariadb -p 3306:3306 -v /path/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=myrootpwd rlesouef/alpine-mariadb
 
 #### Compose example:
 
